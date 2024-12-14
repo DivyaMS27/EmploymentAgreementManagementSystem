@@ -13,7 +13,7 @@ API ENDPOINTS :
     GET /api/employment-agreement/search: Search the agreement by employName,role.
 
 TECHNOLOGIES :
-    Java & Spring Boot
-    MySQL Database
+    Java & Spring Boot,
+    MySQL Database,
     Postman for API testing.
 
