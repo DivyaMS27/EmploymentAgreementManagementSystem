@@ -5,6 +5,7 @@ import com.gorai.EmployeeManagement.service.EmploymentAgreementService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/employment-agreement")
@@ -38,5 +39,15 @@ public class EmploymentAgreementController {
     public ResponseEntity<Void> deleteAgreement(@PathVariable Long id) {
         service.deleteAgreement(id);
         return ResponseEntity.noContent().build();
+    }
+    
+    @GetMapping
+    public ResponseEntity<List<EmploymentAgreement>> getAllAgreements() {
+        return ResponseEntity.ok(service.getAllAgreements());
+    }
+
+    @GetMapping("/search")
+    public ResponseEntity<List<EmploymentAgreement>> searchAgreements(@RequestParam(required = false) String employeeName,@RequestParam(required = false) String role) {
+        return ResponseEntity.ok(service.searchAgreements(employeeName,role));
     }
 }
