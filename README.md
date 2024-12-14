@@ -9,6 +9,8 @@ API ENDPOINTS :
     GET /api/employment-agreements/{id}: Retrieve an agreement by ID.
     PUT /api/employment-agreements/{id}: Update an agreement.
     DELETE /api/employment-agreements/{id}: Delete an agreement.
+    GET /api/employment-agreements:Fetch all list of agreement.
+    GET /api/employment-agreement/search: Search the agreement by employName,role.
 
 TECHNOLOGIES :
     Java & Spring Boot
